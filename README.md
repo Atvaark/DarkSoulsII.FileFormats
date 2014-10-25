@@ -11,37 +11,38 @@ Most of the files are stored in the following archives (Some files aren't packed
 * HqPartsEbl
 
 The following file formats are used in the archives:
-Name|Explanation
-----|-----------
-.bnd|General purpose archive
-.texbnd|Texture archive
-.dcx|Compressed file archive
-.tae|Character related
-.esd|AI state machine
-.dclbnd| Decal/Texture archive
-.list|Map id and name table
-.fmg|String table
-.vsd|Voice synchronization
-.ini|Settings
-.fltbnd|Filter archive
-.tpf|Texture
-.breakobj|Destructible map objects
-.fltparam|Filter settings
-.msb|Map related
-.ngp|Map related
-.gibhd|Model archive header
-.hkxbhd|Havok Engine archive header
-.mapbhd|Map archive header
-.tpfbhd|Texture archive header
-.tpfbdt|Texture archive
-.param|General purpose lookup-table
-.acb|Map model/texture related
-.pfbbin|Model related
-.fxo|HLSLShader
-.bin|Word filter
-.ffxbnd|SFX archive
-.xpu|GUI HLSL Shader
-.xvu|GUI HLSL Shader
+
+Name       | Explanation
+---------- | -----------
+.bnd       | General purpose archive
+.texbnd    | Texture archive
+.dcx       | Compressed file archive
+.tae       | Character related
+.esd       | AI state machine
+.dclbnd    | Decal/Texture archive
+.list      | Map id and name table
+.fmg       | String table
+.vsd       | Voice synchronization
+.ini       | Settings
+.fltbnd    | Filter archive
+.tpf       | Texture
+.breakobj  | Destructible map objects
+.fltparam  | Filter settings
+.msb       | Map related
+.ngp       | Map related
+.gibhd     | Model archive header
+.hkxbhd    | Havok Engine archive header
+.mapbhd    | Map archive header
+.tpfbhd    | Texture archive header
+.tpfbdt    | Texture archive
+.param     | General purpose lookup-table
+.acb       | Map model/texture related
+.pfbbin    | Model related
+.fxo       | HLSLShader
+.bin       | Word filter
+.ffxbnd    | SFX archive
+.xpu       | GUI HLSL Shader
+.xvu       | GUI HLSL Shader
 
 #Additional notes:
 There are 3 file formats that are used for many purposes.
