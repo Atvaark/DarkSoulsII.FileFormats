@@ -37,7 +37,7 @@ Name       | Description
 The following file formats are used in the archives:
 
 Name       | Description
-------------------------
+---------- | ------------
 .acb       | Unknown (Map model/texture related)
 .bin       | Word filter
 .bmp       | Bitmap
@@ -90,8 +90,6 @@ There are 3 file formats that are used for many purposes.
 In Dark Souls II each map has its own id. Majula for example has the id 10040000. FROM formats the map id like this mXX_XX_XX_XX. That means e.g. that files that are related to Majula have m10_04_00_00 in their name. Valid map ids can be found in WorldMapList.list or MapName.fmg.
 
 #Encryption
-These are 
-
 
 ##Regulation: 
 AES-128 CTR
