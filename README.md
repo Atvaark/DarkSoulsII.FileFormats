@@ -121,3 +121,23 @@ Encryption  | AES-128 ECB
 Key         | Keys are stored in the header file
 Hash        | SHA-256
 Salt        | Stored in the header file (e.g. FRPG2_STEAM_GAME_DATA_EBL_SALT for GameDataEbl.bhd)
+
+#Hashing
+
+##File name hash
+The file name hashes are calculated with the following algorithm:
+1. Remove the prefix
+  1. Find the first occurrence of ':'
+    * Abort if no ':' was found
+    * Continue with the substring after ':'
+2. Initialize the hash with 0
+3. Iterate through the substring
+  1. If the character is uppercase then convert it to lowercase
+  2. If the character is '\' then replace it with '/'
+  3. Multiply the hash with 37
+  4. Add the numeric representation of the character to the hash
+
+##File name hash example
+File name                                     | Archive      | Hash
+--------------------------------------------- | ------------ | -----------
+map:/param/GeneratorParam_m10_02_00_00.param  | GameDataEbl  | 2779221649
