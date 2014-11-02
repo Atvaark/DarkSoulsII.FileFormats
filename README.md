@@ -124,8 +124,8 @@ Salt        | Stored in the header file (e.g. FRPG2_STEAM_GAME_DATA_EBL_SALT for
 
 #Hashing
 
-##File name hash
-The file name hashes are calculated with the following algorithm:
+##File name hash algorithm
+
 1. Remove the prefix
   1. Find the first occurrence of ':'
     * Abort if no ':' was found
