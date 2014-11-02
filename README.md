@@ -118,6 +118,6 @@ Remarks     | The game uses OpenSSL and Eric Young's PKCS#1 RSA_eay_public_decry
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | AES-128 ECB
-Key         | Keys is stored in the header file
+Key         | Keys are stored in the header file
 Hash        | SHA-256
-Salt        | Stored in the header file
+Salt        | Stored in the header file (e.g. FRPG2_STEAM_GAME_DATA_EBL_SALT for GameDataEbl.bhd)
