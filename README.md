@@ -105,11 +105,19 @@ IV          | 80DD6C870F2017915B4CFD8F00000001 (Valid for calibration 1.0.12)
 Encryption  | AES-128 CBC
 Key         | B7FD463E4A9C1102DF1739E5F3B2A50F
 IV          | First 16 bytes in the USER_DATA000-USER_DATA022 files
-Checksum    | Second 16 bytes in the USER_DATA000-USER_DATA022 files. (Unknown algorithm)
+Checksum    | Second 16 bytes in the USER_DATA000-USER_DATA022 files (Unknown algorithm)
 
-##Archives:
+##Archive headers:
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | RSA 2048
-Key         | Public keys stored in pem files
+Key         | Public keys are stored in PKCS#1 PEM files
 Remarks     | The game uses OpenSSL and Eric Young's PKCS#1 RSA_eay_public_decrypt function
+
+##Archive data:
+&nbsp;      | &nbsp;
+----------- | ----------------------------------------------------------------
+Encryption  | AES-128 ECB
+Key         | Keys is stored in the header file
+Hash        | SHA-256
+Salt        | Stored in the header file
