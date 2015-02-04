@@ -96,7 +96,8 @@ In Dark Souls II each map has its own id. Majula for example has the id 10040000
 ----------- | ----------------------------------------------------------------
 Encryption  | AES-128 CTR
 Key         | 40178130DF0A94543309E171ECBF254C
-IV          | 80DD6C870F2017915B4CFD8F00000001 (Valid for calibration 1.0.12)
+IV          | 80B41AAA156D20001435434E00000001 (Valid for calibration 1.0.13
+
 
 
 ##Savegames:
