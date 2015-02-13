@@ -42,12 +42,16 @@ Name       | Description
 .bin       | Word filter
 .bmp       | Bitmap
 .breakobj  | Destructible map objects
+.btao      | Unknown (Map/Light related)
 .btl       | Unknown (Map related)
+.btof      | Unknown (Map/Light related)
 .btpb      | Unknown (Map/Point could related)
+.btpo      | Unknown (Map/Light related)
 .ccm       | Unknown (Font related)
 .clm       | Unknown (Cloth related)
-.ctl       | Unknown (FaceGen related)
-.egt       | Unknown (FaceGen related)
+.ctl       | FaceGen Control
+.dds       | Direct Draw Surface
+.egt       | FaceGen Statistical Texture
 .emevd     | Special effect table
 .esd       | AI state machine
 .fev       | Audio
@@ -57,6 +61,7 @@ Name       | Description
 .fpo       | Unknown (Shader related)
 .fsb       | Sound
 .fxo       | HLSLShader
+.hkt       | Unknown (Havok/Model related)
 .hkx       | Unknown (Havok related)
 .hkxpwv    | Unknown (Havok related)
 .ini       | Settings
@@ -72,8 +77,11 @@ Name       | Description
 .param     | General purpose lookup-table
 .pem       | RSA public key container
 .pfbbin    | Unknown (Model related)
+.pxt       | Unknown (Texture related)
+.sib       | Unknown (Model related) 
 .sfxparam  | Sound settings
 .tae       | Unknown (Character related)
+.tga       | Truevision TGA
 .tpf       | Texture
 .vpo       | Shader
 .vsd       | Voice synchronization
