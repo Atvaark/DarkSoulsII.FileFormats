@@ -47,7 +47,7 @@ Name       | Description
 .btof      | Unknown (Map/Light related)
 .btpb      | Unknown (Map/Point could related)
 .btpo      | Unknown (Map/Light related)
-.ccm       | Unknown (Font related)
+.ccm       | Font glyph definition file (sans the font bitmap) 
 .clm       | Unknown (Cloth related)
 .ctl       | FaceGen Control
 .dds       | Direct Draw Surface
@@ -58,7 +58,7 @@ Name       | Description
 .fltparam  | Filter settings
 .flvpwv    | Unknown (Model related)
 .fmg       | String table
-.fpo       | Unknown (Shader related)
+.fpo       | Fragment shader
 .fsb       | Sound
 .fxo       | HLSLShader
 .hkt       | Unknown (Havok/Model related)
@@ -67,7 +67,7 @@ Name       | Description
 .ini       | Settings
 .itl       | Sound
 .list      | Map id and name table
-.msb       | Unknown (Map related)
+.msb       | Map layout
 .mtd       | Material
 .mte       | Unknown (Map related)
 .mte       | Unknown (Model related)
@@ -80,16 +80,16 @@ Name       | Description
 .pxt       | Unknown (Texture related)
 .sib       | Unknown (Model related) 
 .sfxparam  | Sound settings
-.tae       | Unknown (Character related)
+.tae       | Animation listings and events
 .tga       | Truevision TGA
 .tpf       | Texture
-.vpo       | Shader
+.vpo       | Vertex shader
 .vsd       | Voice synchronization
 .xml       | Shader information
 .xpu       | GUI HLSL Shader
 .xvu       | GUI HLSL Shader
 
-#Additional notes:
+#Additional notes
 There are 3 file formats that are used for many purposes.
 * BND4 or Binder 4 is the most used archive format. It contains a table of all the files that it contains, their ASCII or UNICODE file names and sometimes even the full path from when they were packed. 
 * PARAM is a game archive that is is used to store easy accessible settings for many aspects of the game. Each map has its own set of param files that contain information about events, spawnpoints and objects. Most param files are stored in the file regulation.bnd. This file contains the so called calibrations (i.a. the stats of items, enemies and NPCs). It can be found in the /Game/ directory and is encrypted with AES-128. Each PARAM file consists of a lookup-table and a set of values of the same size. The size of each value depends on which param type is used (Each file contains the name of the type in its header).
@@ -99,7 +99,7 @@ In Dark Souls II each map has its own id. Majula for example has the id 10040000
 
 #Encryption
 
-##Regulation: 
+##Regulation
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | AES-128 CTR
@@ -108,7 +108,7 @@ IV          | 80B41AAA156D20001435434E00000001 (Valid for calibration 1.0.13
 
 
 
-##Savegames:
+##Savegames
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | AES-128 CBC
@@ -116,14 +116,22 @@ Key         | B7FD463E4A9C1102DF1739E5F3B2A50F
 IV          | First 16 bytes in the USER_DATA000-USER_DATA022 files
 Checksum    | Second 16 bytes in the USER_DATA000-USER_DATA022 files (Unknown algorithm)
 
-##Archive headers:
+##Savegames SotFS
+&nbsp;      | &nbsp;
+----------- | ----------------------------------------------------------------
+Encryption  | Unknown
+Key         | Unknown
+IV          | First 16 bytes in the USER_DATA000-USER_DATA022 files
+Checksum    | Second 16 bytes in the USER_DATA000-USER_DATA022 files (Unknown algorithm)
+
+##Archive headers
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | RSA 2048
 Key         | Public keys are stored in PKCS#1 PEM files
 Remarks     | The game uses OpenSSL and Eric Young's PKCS#1 RSA_eay_public_decrypt function
 
-##Archive data:
+##Archive data
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | AES-128 ECB
