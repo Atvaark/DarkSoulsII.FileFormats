@@ -89,7 +89,7 @@ Name       | Description
 .xpu       | GUI HLSL Shader
 .xvu       | GUI HLSL Shader
 
-#Additional notes
+## Additional notes
 There are 3 file formats that are used for many purposes.
 * BND4 or Binder 4 is the most used archive format. It contains a table of all the files that it contains, their ASCII or UNICODE file names and sometimes even the full path from when they were packed. 
 * PARAM is a game archive that is is used to store easy accessible settings for many aspects of the game. Each map has its own set of param files that contain information about events, spawnpoints and objects. Most param files are stored in the file regulation.bnd. This file contains the so called calibrations (i.a. the stats of items, enemies and NPCs). It can be found in the /Game/ directory and is encrypted with AES-128. Each PARAM file consists of a lookup-table and a set of values of the same size. The size of each value depends on which param type is used (Each file contains the name of the type in its header).
@@ -97,9 +97,10 @@ There are 3 file formats that are used for many purposes.
 
 In Dark Souls II each map has its own id. Majula for example has the id 10040000. FROM formats the map id like this mXX_XX_XX_XX. That means e.g. that files that are related to Majula have m10_04_00_00 in their name. Valid map ids can be found in WorldMapList.list or MapName.fmg.
 
-#Encryption
+# Encryption
 
-##Regulation
+## Regulation
+
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | AES-128 CTR
@@ -108,7 +109,8 @@ IV          | 80B41AAA156D20001435434E00000001 (Valid for calibration 1.0.13
 
 
 
-##Savegames
+## Savegames
+
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | AES-128 CBC
@@ -116,7 +118,8 @@ Key         | B7FD463E4A9C1102DF1739E5F3B2A50F
 IV          | First 16 bytes in the USER_DATA000-USER_DATA022 files
 Checksum    | Second 16 bytes in the USER_DATA000-USER_DATA022 files (Unknown algorithm)
 
-##Savegames SotFS
+## Savegames SotFS
+
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | Unknown
@@ -124,14 +127,16 @@ Key         | Unknown
 IV          | First 16 bytes in the USER_DATA000-USER_DATA022 files
 Checksum    | Second 16 bytes in the USER_DATA000-USER_DATA022 files (Unknown algorithm)
 
-##Archive headers
+## Archive headers
+
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | RSA 2048
 Key         | Public keys are stored in PKCS#1 PEM files
 Remarks     | The game uses OpenSSL and Eric Young's PKCS#1 RSA_eay_public_decrypt function
 
-##Archive data
+## Archive data
+
 &nbsp;      | &nbsp;
 ----------- | ----------------------------------------------------------------
 Encryption  | AES-128 ECB
@@ -139,9 +144,9 @@ Key         | Keys are stored in the header file
 Hash        | SHA-256
 Salt        | Stored in the header file (e.g. FRPG2_STEAM_GAME_DATA_EBL_SALT for GameDataEbl.bhd)
 
-#Hashing
+# Hashing
 
-##File name hash algorithm
+## File name hash algorithm
 
 1. Remove the prefix
   1. Find the first occurrence of ':'
@@ -154,7 +159,8 @@ Salt        | Stored in the header file (e.g. FRPG2_STEAM_GAME_DATA_EBL_SALT for
   3. Multiply the hash with 37
   4. Add the numeric representation of the character to the hash
 
-##File name hash example
+## File name hash example
+
 File name                                     | Archive      | Hash
 --------------------------------------------- | ------------ | -----------
 map:/param/GeneratorParam_m10_02_00_00.param  | GameDataEbl  | 2779221649
